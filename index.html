@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEURAL_OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#f8f9fa",
+                    "on-error": "#ba1a1a",
+                    "primary-fixed-dim": "#00696f",
+                    "surface-variant": "#dbe4e6",
+                    "tertiary-container": "#006d1e",
+                    "secondary-container": "#4c5861",
+                    "surface-container-highest": "#e8f2f4",
+                    "inverse-primary": "#4dd5d9",
+                    "primary": "#00696f",
+                    "surface-container": "#f0f4f5",
+                    "primary-container": "#9df0f4",
+                    "outline-variant": "#bec8cc",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-container": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary-fixed": "#ffffff",
+                    "tertiary-fixed-dim": "#006d1e",
+                    "on-secondary-fixed-variant": "#1e2d32",
+                    "on-background": "#191c1d",
+                    "on-tertiary-fixed-variant": "#ffffff",
+                    "secondary-fixed": "#d0e6ed",
+                    "surface-dim": "#e8f2f4",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "secondary": "#52606a",
+                    "on-surface-variant": "#3e484d",
+                    "tertiary-fixed": "#52db6a",
+                    "inverse-surface": "#2d3132",
+                    "surface-container-low": "#f0f4f5",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#00696f",
+                    "on-primary-container": "#001f22",
+                    "outline": "#6f797d",
+                    "on-tertiary-fixed": "#ffffff",
+                    "on-error-container": "#410002",
+                    "on-primary-fixed": "#ffffff",
+                    "surface-container-high": "#e8f2f4",
+                    "primary-fixed": "#9df0f4",
+                    "background": "#f8f9fa",
+                    "inverse-on-surface": "#eff1f2",
+                    "on-primary-fixed-variant": "#001f22",
+                    "tertiary": "#006d1e",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#52606a",
+                    "on-secondary-container": "#ffffff",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin": "32px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "label-caps": ["Space Grotesk", "sans-serif"],
+                    "headline-xl": ["Space Grotesk", "sans-serif"],
+                    "headline-lg": ["Space Grotesk", "sans-serif"],
+                    "data-mono": ["monospace"],
+                    "spaceGrotesk": ["Space Grotesk", "sans-serif"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "data-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+            background-image:
+                radial-gradient(circle at 30% 20%, rgba(173, 216, 230, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(240, 248, 255, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 70%),
+                linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+            background-size: 400px 400px, 300px 300px, 600px 600px, 40px 40px, 40px 40px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 3s linear infinite;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

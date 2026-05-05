@@ -1,0 +1,113 @@
+/* Execution Card Positioning and Animations */
+.card-position-top {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  transform: scale(0.95) translateY(-20px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-position-middle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.card-position-bottom {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  transform: scale(0.95) translateY(20px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-position-exit-up {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: slideUpFadeOut 700ms ease-out forwards;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes slideUpFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150%) scale(0.95);
+  }
+}
+
+/* Siri Globe Animation */
+.siri-globe {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(0, 105, 111, 0.8), rgba(0, 105, 111, 0.4), transparent);
+  box-shadow:
+    0 0 40px rgba(0, 105, 111, 0.6),
+    0 0 80px rgba(0, 105, 111, 0.4),
+    0 0 120px rgba(0, 105, 111, 0.2);
+  animation: siri-pulse 3s ease-in-out infinite, siri-rotate 20s linear infinite;
+  position: relative;
+}
+
+.siri-globe::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.3), transparent);
+  animation: siri-wave 4s ease-in-out infinite;
+}
+
+@keyframes siri-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes siri-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes siri-wave {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
